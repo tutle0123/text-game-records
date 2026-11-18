@@ -60,7 +60,7 @@ function heading(level,label,index){
   const h=el("h"+level);inline(h,label);h.id="rule-"+index;article.append(h);
   const isFull=doc==="complete-rulebook";
   if(level===1){
-    const isPart=/^(제[0-9]+편|부록)(?:\\s|\\b|$)/.test(label);
+    const isPart=label.startsWith("부록") || /^제[0-9]+편/.test(label);
     if(!isFull || isPart){group(label);appendToc("편 시작",h.id,1);}
     else if(!currentGroup){group("시작 안내");appendToc("규칙서 첫머리",h.id,1);}
   }else if(level===2){
