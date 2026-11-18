@@ -8,34 +8,7 @@
       "symbol": "▣",
       "theme": "classified",
       "worldFile": "worlds/bardonia/world.md",
-      "games": [
-        {
-          "id": "bardonia-001",
-          "slug": "game-001-berezin-001",
-          "gameNumber": 1,
-          "nameNumber": 1,
-          "title": "정치수사과장의 일상",
-          "character": "아르카디 파블로비치 베레진",
-          "characterLabel": "베레진 #001",
-          "status": "진행 중",
-          "gameDate": "1947년 10월 21일 · 16:21",
-          "summary": "젊은 정치수사과장의 업무와 일상",
-          "url": "worlds/bardonia/game-001-berezin-001/index.html"
-        },
-        {
-          "id": "bardonia-002",
-          "slug": "game-002-berezin-002",
-          "gameNumber": 2,
-          "nameNumber": 2,
-          "title": "정치수사과장의 일상 — 베레진 #002",
-          "character": "아르카디 파블로비치 베레진",
-          "characterLabel": "베레진 #002",
-          "status": "진행 중",
-          "gameDate": "1947년 11월 3일 · 16:06",
-          "summary": "제12공동주택 앞 · 관용 승용차 도착",
-          "url": "worlds/bardonia/game-002-berezin-002/index.html"
-        }
-      ]
+      "games": []
     }
   ]
 }
