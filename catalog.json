@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "worlds": [
+    {
+      "id": "bardonia",
+      "name": "바르도니아 연방 공화국",
+      "description": "1940년대풍 사회주의 독재국가 · 국가보안부",
+      "symbol": "▣",
+      "theme": "classified",
+      "worldFile": "worlds/bardonia/world.md",
+      "games": [
+        {
+          "id": "bardonia-001",
+          "slug": "game-001-berezin-001",
+          "gameNumber": 1,
+          "nameNumber": 1,
+          "title": "정치수사과장의 일상",
+          "character": "아르카디 파블로비치 베레진",
+          "characterLabel": "베레진 #001",
+          "status": "진행 중",
+          "gameDate": "1947년 10월 21일 · 16:21",
+          "summary": "젊은 정치수사과장의 업무와 일상",
+          "url": "worlds/bardonia/game-001-berezin-001/index.html"
+        }
+      ]
+    }
+  ]
+}
