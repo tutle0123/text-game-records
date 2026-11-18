@@ -6,7 +6,10 @@
     "title": "새 게임",
     "status": "설정 중",
     "slug": "game-001-character-001",
-    "theme": "neutral"
+    "theme": "neutral",
+    "worldbookTitle": "",
+    "worldbookSource": "",
+    "worldbookSummaryPath": ""
   },
   "clock": {
     "dateLabel": "미정",
