@@ -1,0 +1,500 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Text Game Records universal game-state schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "game",
+    "clock",
+    "scene",
+    "player",
+    "people",
+    "tasks",
+    "relationships",
+    "worldState",
+    "places",
+    "organizations",
+    "secrets"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "game": {
+      "type": "object",
+      "required": [
+        "id",
+        "worldId",
+        "title",
+        "status",
+        "slug",
+        "theme"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "worldId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        }
+      }
+    },
+    "clock": {
+      "type": "object",
+      "required": [
+        "dateLabel",
+        "time"
+      ],
+      "properties": {
+        "dateLabel": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "isoLocal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "title",
+        "place",
+        "summary"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "place": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "player": {
+      "type": "object",
+      "required": [
+        "fullName",
+        "age",
+        "rank",
+        "position",
+        "appearance",
+        "personality",
+        "background",
+        "playRule"
+      ],
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "age": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rank": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "appearance": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "playRule": {
+          "type": "string"
+        }
+      }
+    },
+    "people": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/person"
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/task"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "worldState": {
+      "type": "object",
+      "required": [
+        "processes",
+        "notes"
+      ],
+      "properties": {
+        "processes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "status",
+              "summary",
+              "lastUpdated"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "lastUpdated": {
+                "type": "string"
+              },
+              "constraints": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "places": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/place"
+      }
+    },
+    "organizations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/place"
+      }
+    },
+    "secrets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "activity": {
+      "type": "object",
+      "required": [
+        "description",
+        "place",
+        "confirmedAt",
+        "certainty"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "place": {
+          "type": "string"
+        },
+        "confirmedAt": {
+          "type": "string"
+        },
+        "certainty": {
+          "type": "string"
+        }
+      }
+    },
+    "knowledge": {
+      "type": "object",
+      "required": [
+        "id",
+        "topic",
+        "type",
+        "detail",
+        "learnedAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "learnedAt": {
+          "type": "string"
+        }
+      }
+    },
+    "person": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "role",
+        "affiliation",
+        "occupation",
+        "description",
+        "appearance",
+        "personality",
+        "background",
+        "lastSeenAt",
+        "currentActivity",
+        "taskIds",
+        "goals",
+        "knowledge",
+        "secrets"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "age": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "role": {
+          "type": "string"
+        },
+        "affiliation": {
+          "type": "string"
+        },
+        "occupation": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "appearance": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "lastSeenAt": {
+          "type": "string"
+        },
+        "currentActivity": {
+          "$ref": "#/$defs/activity"
+        },
+        "taskIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "knowledge": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/knowledge"
+          }
+        },
+        "secrets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "status",
+        "summary",
+        "lastKnown",
+        "nextStep",
+        "ownerIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "lastKnown": {
+          "type": "string"
+        },
+        "nextStep": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "ownerIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subjectIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "required": [
+        "id",
+        "fromId",
+        "toId",
+        "kind",
+        "baseline",
+        "current",
+        "outward",
+        "lastChangedAt",
+        "changes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "fromId": {
+          "type": "string"
+        },
+        "toId": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "baseline": {
+          "type": "string"
+        },
+        "current": {
+          "type": "string"
+        },
+        "outward": {
+          "type": "string"
+        },
+        "lastChangedAt": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "at",
+              "before",
+              "after",
+              "reason"
+            ],
+            "properties": {
+              "at": {
+                "type": "string"
+              },
+              "before": {
+                "type": "string"
+              },
+              "after": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "place": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "lastKnown": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
