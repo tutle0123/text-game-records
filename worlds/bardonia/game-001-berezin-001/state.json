@@ -1,10 +1,12 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "2.0",
   "game": {
     "id": "bardonia-001",
     "title": "정치수사과장의 일상",
     "status": "진행 중",
-    "slug": "game-001-berezin-001"
+    "slug": "game-001-berezin-001",
+    "worldId": "bardonia",
+    "theme": "classified"
   },
   "clock": {
     "dateLabel": "1947년 10월 21일",
@@ -31,46 +33,237 @@
       "name": "미하일 안드레예비치 그로모프",
       "age": 54,
       "role": "보안소장 · 제1국장",
-      "note": "베레진의 직속 상관. 능력을 신임하지만 지휘권의 선은 분명히 합니다."
+      "note": "베레진의 직속 상관. 능력을 신임하지만 지휘권의 선은 분명히 합니다.",
+      "id": "npc-001",
+      "affiliation": "국가보안부 제1국",
+      "occupation": "국장",
+      "description": "실무에 엄격하고 유능한 부하를 높이 평가합니다.",
+      "appearance": "미정",
+      "personality": "엄격하고 실리적인 지휘관입니다.",
+      "background": "미정",
+      "lastSeenAt": "확인되지 않음",
+      "currentActivity": {
+        "description": "현재 활동은 확인되지 않음",
+        "place": "확인되지 않음",
+        "confirmedAt": "확인되지 않음",
+        "certainty": "미확정"
+      },
+      "goals": [],
+      "taskIds": [],
+      "knowledge": [],
+      "secrets": []
     },
     {
       "name": "니콜라이 페트로비치 오를로프",
       "age": 44,
       "role": "보안대위 · 제4과 선임수사관",
-      "note": "성실한 베테랑 실무 책임자. 베레진에게 복귀 후 잠깐 만나자고 전했습니다."
+      "note": "성실한 베테랑 실무 책임자. 베레진에게 복귀 후 잠깐 만나자고 전했습니다.",
+      "id": "npc-002",
+      "affiliation": "국가보안부 제1국 제4과",
+      "occupation": "선임수사관",
+      "description": "실무 경험이 풍부한 선임수사관입니다.",
+      "appearance": "미정",
+      "personality": "노련하고 신중합니다.",
+      "background": "미정",
+      "lastSeenAt": "마지막 확인 없음",
+      "currentActivity": {
+        "description": "현재 활동은 확인되지 않음",
+        "place": "확인되지 않음",
+        "confirmedAt": "마지막 확인 없음",
+        "certainty": "미확정"
+      },
+      "goals": [
+        "베레진이 청사에 복귀하면 잠깐 만나려 함"
+      ],
+      "taskIds": [],
+      "knowledge": [],
+      "secrets": []
     },
     {
       "name": "파벨 세르게예비치 말체프",
       "age": 28,
       "role": "보안중위 · 제4과 수사관",
-      "note": "베레진의 부하. 라디오 취득 경위 확인을 위임받아 임시보관과 기본 서류를 처리했습니다."
+      "note": "베레진의 부하. 라디오 취득 경위 확인을 위임받아 임시보관과 기본 서류를 처리했습니다.",
+      "id": "npc-003",
+      "affiliation": "국가보안부 제1국 제4과",
+      "occupation": "수사관",
+      "description": "의욕적이고 야심이 있으며 베레진을 존경하면서도 두려워합니다.",
+      "appearance": "미정",
+      "personality": "의욕적이고 출세 의지가 강합니다.",
+      "background": "미정",
+      "lastSeenAt": "1947-10-21 16:21",
+      "currentActivity": {
+        "description": "관용차 부근으로 돌아와 라디오 임시보관 조치와 서류 작성 결과를 보고함",
+        "place": "그레이트베일 제6간부주택단지 제2동 앞",
+        "confirmedAt": "1947-10-21 16:21",
+        "certainty": "현장 확인"
+      },
+      "goals": [
+        "업무 수행에서 능력을 인정받으려 함"
+      ],
+      "taskIds": [
+        "radio"
+      ],
+      "knowledge": [
+        {
+          "id": "knowledge-001",
+          "topic": "카르포프의 외국산 라디오",
+          "type": "직접 확인",
+          "detail": "라디오를 임시보관하고 인계 확인서를 작성했으며, 취득 경위에 관한 진술을 확보했습니다.",
+          "learnedAt": "1947-10-21 16:21"
+        }
+      ],
+      "secrets": []
     },
     {
       "name": "이리나 알렉산드로브나 소콜로바",
       "age": 33,
       "role": "보안대위 · 제4과 수사관",
-      "note": "침착하고 정확한 실무자. 보로딘 건 압수물 목록 정리 담당."
+      "note": "침착하고 정확한 실무자. 보로딘 건 압수물 목록 정리 담당.",
+      "id": "npc-004",
+      "affiliation": "국가보안부 제1국 제4과",
+      "occupation": "수사관",
+      "description": "꼼꼼하고 절제된 태도로 수사를 진행합니다.",
+      "appearance": "미정",
+      "personality": "꼼꼼하고 침착하며 수사 능력이 뛰어납니다.",
+      "background": "미정",
+      "lastSeenAt": "확인되지 않음",
+      "currentActivity": {
+        "description": "보로딘 건 압수물 목록 정리 담당",
+        "place": "확인되지 않음",
+        "confirmedAt": "확인되지 않음",
+        "certainty": "담당 업무만 확인"
+      },
+      "goals": [],
+      "taskIds": [
+        "borodin"
+      ],
+      "knowledge": [],
+      "secrets": []
     },
     {
       "name": "세르게이 이바노비치 카르포프",
       "age": 51,
       "role": "국가계획위원회 자재배분총국 부국장 · 18호 주민",
-      "note": "체포된 보로딘과 오랜 이웃. 외국산 라디오의 취득 경위에 관한 진술을 했습니다."
+      "note": "체포된 보로딘과 오랜 이웃. 외국산 라디오의 취득 경위에 관한 진술을 했습니다.",
+      "id": "npc-005",
+      "affiliation": "국가계획위원회 자재배분총국",
+      "occupation": "부국장",
+      "description": "제6간부주택단지 제2동 18호에 사는 고위 관료입니다.",
+      "appearance": "미정",
+      "personality": "베레진의 방문 동안 불안을 감추며 응대했습니다.",
+      "background": "미정",
+      "lastSeenAt": "1947-10-21 16:09",
+      "currentActivity": {
+        "description": "베레진의 방문과 라디오 확인에 응대함",
+        "place": "제6간부주택단지 제2동 18호",
+        "confirmedAt": "1947-10-21 16:09",
+        "certainty": "당시 대면 확인"
+      },
+      "goals": [],
+      "taskIds": [],
+      "knowledge": [
+        {
+          "id": "knowledge-002",
+          "topic": "베레진의 신원",
+          "type": "직접 들음",
+          "detail": "베레진이 알려준 이름과 부서·직책을 알고 있습니다. 정확한 나이는 전해 듣지 않았습니다.",
+          "learnedAt": "1947-10-21 16:09"
+        },
+        {
+          "id": "knowledge-003",
+          "topic": "보로딘의 생산실적 관련 고민",
+          "type": "이웃에게 들음",
+          "detail": "보로딘이 생산실적 문서와 상관의 서명 지시 문제를 걱정했다는 사실을 알고 있습니다. 혐의의 진위는 확인되지 않았습니다.",
+          "learnedAt": "1947-10-21 16:03"
+        }
+      ],
+      "secrets": []
     },
     {
       "name": "카르포프 부인",
       "role": "18호 주민",
-      "note": "베레진에게 물과 차, 직접 만든 과자를 대접했습니다. 이름은 미정입니다."
+      "note": "베레진에게 물과 차, 직접 만든 과자를 대접했습니다. 이름은 미정입니다.",
+      "id": "npc-006",
+      "affiliation": "확인되지 않음",
+      "occupation": "18호 주민",
+      "description": "카르포프의 아내로, 베레진을 집 안으로 맞아들여 대접했습니다.",
+      "appearance": "미정",
+      "personality": "확인되지 않음",
+      "background": "미정",
+      "lastSeenAt": "1947-10-21 16:09",
+      "currentActivity": {
+        "description": "베레진에게 물과 차, 과자를 대접함",
+        "place": "제6간부주택단지 제2동 18호",
+        "confirmedAt": "1947-10-21 16:09",
+        "certainty": "당시 대면 확인"
+      },
+      "goals": [],
+      "taskIds": [],
+      "knowledge": [
+        {
+          "id": "knowledge-004",
+          "topic": "베레진의 정확한 나이",
+          "type": "알지 못함",
+          "detail": "베레진에게 나이를 직접 듣지 않았습니다.",
+          "learnedAt": "1947-10-21 16:09"
+        }
+      ],
+      "secrets": []
     },
     {
       "name": "보로딘",
       "role": "17호 주민 · 중공업인민위원부 직원",
-      "note": "고발 건으로 제4과가 연행했습니다. 세부 혐의와 조사 결과는 별도 확정되지 않았습니다."
+      "note": "고발 건으로 제4과가 연행했습니다. 세부 혐의와 조사 결과는 별도 확정되지 않았습니다.",
+      "id": "npc-007",
+      "affiliation": "중공업인민위원부",
+      "occupation": "직원",
+      "description": "17호 주민. 생산실적 관련 문서 문제를 걱정했다는 이웃 진술이 있으며 정치 수사 대상으로 연행되었습니다.",
+      "appearance": "미정",
+      "personality": "확인되지 않음",
+      "background": "미정",
+      "lastSeenAt": "1947-10-21 15:55",
+      "currentActivity": {
+        "description": "연행되어 중앙구금소에 신병이 인계됨",
+        "place": "중앙구금소(인계 시점)",
+        "confirmedAt": "1947-10-21 15:55",
+        "certainty": "인계 결과 확인"
+      },
+      "goals": [],
+      "taskIds": [],
+      "knowledge": [
+        {
+          "id": "knowledge-005",
+          "topic": "베레진의 방문",
+          "type": "인지 여부 미확정",
+          "detail": "이웃 카르포프 집에 베레진이 들렀다는 사실을 보로딘이 알게 됐는지는 확인되지 않았습니다.",
+          "learnedAt": "미정"
+        }
+      ],
+      "secrets": []
     },
     {
       "name": "알렉산드르 코즐로프(사샤)",
       "role": "제17인민학교 3학년",
-      "note": "아파트 현관 앞에서 베레진과 부딪혀 넘어졌으나 큰 부상은 확인되지 않았습니다."
+      "note": "아파트 현관 앞에서 베레진과 부딪혀 넘어졌으나 큰 부상은 확인되지 않았습니다.",
+      "id": "npc-008",
+      "affiliation": "제17인민학교",
+      "occupation": "학생",
+      "description": "제17인민학교 3학년 남자아이이며, 제6간부주택단지 앞에서 베레진과 마주쳤습니다.",
+      "appearance": "미정",
+      "personality": "확인되지 않음",
+      "background": "미정",
+      "lastSeenAt": "1947-10-21 16:16",
+      "currentActivity": {
+        "description": "넘어졌다 일어나 공책을 돌려받음",
+        "place": "제6간부주택단지 제2동 앞",
+        "confirmedAt": "1947-10-21 16:16",
+        "certainty": "당시 대면 확인"
+      },
+      "goals": [],
+      "taskIds": [],
+      "knowledge": [],
+      "secrets": []
     }
   ],
   "tasks": [
@@ -81,7 +274,13 @@
       "status": "기본 조치 완료 · 후속 확인 대기",
       "lastKnown": "1947-10-21 16:21",
       "summary": "카르포프는 재작년 옛 직장 동료에게 약 2천 루블을 주고 샀다고 진술했습니다. 양도 증빙은 없으며, 라디오는 임시보관 조치하고 인계 확인서를 작성했습니다. 최종 적법성·출처는 확인되지 않았습니다.",
-      "nextStep": "청사 복귀 후 필요한 문서 조회 및 후속 절차 진행. 결과는 아직 미정입니다."
+      "nextStep": "청사 복귀 후 필요한 문서 조회 및 후속 절차 진행. 결과는 아직 미정입니다.",
+      "ownerIds": [
+        "npc-003"
+      ],
+      "subjectIds": [
+        "npc-005"
+      ]
     },
     {
       "id": "borodin",
@@ -90,13 +289,144 @@
       "status": "신병 인계 · 기록 정리 중",
       "lastKnown": "1947-10-21 15:55",
       "summary": "고발에 따라 연행. 중앙구금소 인계가 끝났으며 압수물 목록은 정리 중입니다.",
-      "nextStep": "관련 사건의 지휘계통에 따른 후속 수사."
+      "nextStep": "관련 사건의 지휘계통에 따른 후속 수사.",
+      "ownerIds": [
+        "npc-004"
+      ],
+      "subjectIds": [
+        "npc-007"
+      ]
     }
   ],
-  "offstage": [
-    "말체프의 라디오 확인은 현재까지 진술 확보·임시보관 단계입니다. 향후 게임 속 시간 경과 및 실제 업무 조건에 맞춰 진전시켜야 합니다.",
-    "오를로프는 베레진이 청사에 복귀하면 잠시 만나기를 원합니다. 구체적 용건은 아직 확정되지 않았습니다.",
-    "NPC가 알고 있는 정보와 기록장이 담은 사실은 다릅니다. 카르포프 부부는 베레진의 정확한 나이를 듣지 못했습니다.",
-    "추가로 확정된 숨겨진 사건은 없습니다. 단순한 기록의 공백을 억지 사건으로 채우지 않습니다."
-  ]
+  "relationships": [
+    {
+      "id": "rel-001",
+      "fromId": "npc-001",
+      "toId": "player",
+      "kind": "국장 → 직속 과장",
+      "baseline": "베레진의 업무 능력을 신임",
+      "current": "업무 능력을 높이 평가하며 지휘상 엄격함을 유지",
+      "outward": "엄격하고 실무적으로 대함",
+      "lastChangedAt": "",
+      "evidence": "확정 인물 설정",
+      "changes": []
+    },
+    {
+      "id": "rel-002",
+      "fromId": "npc-002",
+      "toId": "player",
+      "kind": "선임수사관 → 과장",
+      "baseline": "업무상 상하 관계",
+      "current": "개인적 감정은 미확정. 복귀 후 대화를 요청한 상태",
+      "outward": "업무상 정상적인 보고와 협력",
+      "lastChangedAt": "",
+      "evidence": "확정 직책과 최근 요청",
+      "changes": []
+    },
+    {
+      "id": "rel-003",
+      "fromId": "npc-003",
+      "toId": "player",
+      "kind": "수사관 → 과장",
+      "baseline": "능력을 존경하지만 두려워함",
+      "current": "존경과 경계심이 함께 있음",
+      "outward": "지시를 수행하고 필요한 사항을 보고함",
+      "lastChangedAt": "",
+      "evidence": "확정 인물 설정과 현장 보고",
+      "changes": []
+    },
+    {
+      "id": "rel-004",
+      "fromId": "npc-004",
+      "toId": "player",
+      "kind": "수사관 → 과장",
+      "baseline": "업무상 상하 관계",
+      "current": "개인적 감정은 미확정",
+      "outward": "지시받은 수사 실무를 수행함",
+      "lastChangedAt": "",
+      "evidence": "확정 소속 및 역할",
+      "changes": []
+    },
+    {
+      "id": "rel-005",
+      "fromId": "npc-005",
+      "toId": "player",
+      "kind": "주민 → 국가보안부 과장",
+      "baseline": "이번 방문 이전 관계 미확정",
+      "current": "불안과 경계심을 드러낸 상태. 호오·장기 감정은 미확정",
+      "outward": "정중하게 응대하며 질문에 답함",
+      "lastChangedAt": "",
+      "evidence": "18호 방문 장면",
+      "changes": []
+    },
+    {
+      "id": "rel-006",
+      "fromId": "npc-006",
+      "toId": "npc-005",
+      "kind": "배우자 → 배우자",
+      "baseline": "부부 관계",
+      "current": "부부 관계. 현재 감정은 미확정",
+      "outward": "같은 주택에 거주",
+      "lastChangedAt": "",
+      "evidence": "18호 방문 장면",
+      "changes": []
+    },
+    {
+      "id": "rel-007",
+      "fromId": "npc-005",
+      "toId": "npc-007",
+      "kind": "이웃 → 이웃",
+      "baseline": "오랫동안 이웃으로 지냄",
+      "current": "체포 이후의 감정과 연락 여부는 미확정",
+      "outward": "연행 당시 관계를 축소해 말하다가 친분을 인정함",
+      "lastChangedAt": "",
+      "evidence": "카르포프의 진술",
+      "changes": []
+    }
+  ],
+  "worldState": {
+    "processes": [
+      {
+        "id": "world-001",
+        "title": "오를로프의 복귀 후 면담 요청",
+        "status": "면담 전",
+        "summary": "오를로프가 베레진의 청사 복귀 후 잠깐 만나고 싶다고 전했습니다. 용건은 아직 정해지지 않았습니다.",
+        "lastUpdated": "1947-10-21 16:21",
+        "constraints": "베레진이 아직 청사로 복귀하지 않았습니다. 구체적인 대화 내용은 미확정입니다."
+      }
+    ],
+    "notes": [
+      "말체프의 라디오 확인은 현재까지 진술 확보·임시보관 단계입니다. 향후 게임 속 시간 경과 및 실제 업무 조건에 맞춰 진전시켜야 합니다.",
+      "오를로프는 베레진이 청사에 복귀하면 잠시 만나기를 원합니다. 구체적 용건은 아직 확정되지 않았습니다.",
+      "NPC가 알고 있는 정보와 기록장이 담은 사실은 다릅니다. 카르포프 부부는 베레진의 정확한 나이를 듣지 못했습니다.",
+      "추가로 확정된 숨겨진 사건은 없습니다. 단순한 기록의 공백을 억지 사건으로 채우지 않습니다."
+    ]
+  },
+  "places": [
+    {
+      "id": "place-001",
+      "name": "그레이트베일 제6간부주택단지 제2동",
+      "description": "17호 보로딘 체포와 18호 카르포프 방문이 이루어진 주택 건물. 베레진이 현재 관용차에 있습니다.",
+      "lastKnown": "1947-10-21 16:21"
+    },
+    {
+      "id": "place-002",
+      "name": "국가보안부 중앙청사",
+      "description": "제1국 등 보안부 중앙 조직이 근무하는 청사. 중앙구금소는 지하에 위치합니다.",
+      "lastKnown": "1947-10-21"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org-001",
+      "name": "국가보안부 제1국 제4과",
+      "description": "정치수사과. 과장은 베레진이며 오를로프·말체프·소콜로바 등이 소속되어 있습니다."
+    },
+    {
+      "id": "org-002",
+      "name": "국가계획위원회 자재배분총국",
+      "description": "카르포프가 부국장으로 근무하는 행정 조직. 다른 내부 조직 정보는 미정입니다."
+    }
+  ],
+  "secrets": []
 }
