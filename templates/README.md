@@ -32,3 +32,12 @@
 정보가 없으면 `null`, 빈 배열 또는 '미정'을 사용하고, **의도적으로 확정된 설정을 지어내지 않습니다**. 이 사이트는 읽기 전용입니다. 실질 데이터 수정은 GitHub에 커밋해야 반영됩니다.
 
 바르도니아 #001의 초기 사례: `worlds/bardonia/game-001-berezin-001/`.
+
+## 세계관 설정집을 지정하는 방법
+
+- 새 게임마다 **사용자에게 세계관과 설정집의 정확한 제목을 한 번만** 묻습니다. 사용자가 이미 밝혔다면 반복해서 묻지 않습니다.
+- **게임 운영 규칙**은 진행 방식만 정합니다. 세계의 내용은 **해당 제목의 세계관 설정집 원문**을 따릅니다.
+- `state.json`의 `game.worldbookTitle`에는 제목을, `game.worldbookSource`에는 원문이 있는 위치를, `game.worldbookSummaryPath`에는 GitHub의 참고용 요약본 경로를 기록합니다.
+- 원문을 확인할 수 없으면 다른 세계관 설정으로 대체하거나 사실을 지어내지 않습니다.
+- **저장소:** https://github.com/tutle0123/text-game-records
+- **사이트:** https://tutle0123.github.io/text-game-records/
