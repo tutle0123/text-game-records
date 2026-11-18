@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "game": {
+    "id": "world-001",
+    "title": "새 게임",
+    "status": "진행 중"
+  },
+  "clock": {
+    "dateLabel": "미정",
+    "time": "미정"
+  },
+  "scene": {
+    "title": "시작 전",
+    "place": "미정",
+    "summary": "설정 모드"
+  },
+  "player": {
+    "fullName": "미정",
+    "age": null,
+    "rank": "",
+    "position": "",
+    "appearance": "",
+    "personality": "",
+    "background": "",
+    "playRule": ""
+  },
+  "people": [],
+  "tasks": [],
+  "offstage": []
+}
