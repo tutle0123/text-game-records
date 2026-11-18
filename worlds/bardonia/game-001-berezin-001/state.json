@@ -6,7 +6,10 @@
     "status": "진행 중",
     "slug": "game-001-berezin-001",
     "worldId": "bardonia",
-    "theme": "classified"
+    "theme": "classified",
+    "worldbookTitle": "바르도니아_연방공화국_세계관_설정집.txt",
+    "worldbookSource": "현재 ChatGPT 프로젝트에 첨부된 원문 설정집",
+    "worldbookSummaryPath": "worlds/bardonia/world.md"
   },
   "clock": {
     "dateLabel": "1947년 10월 21일",
