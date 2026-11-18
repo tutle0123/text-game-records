@@ -1,7 +1,7 @@
 /* 규칙서 원문 Markdown을 외부 라이브러리 없이 안전한 DOM으로 표시 */
 (() => {
 "use strict";
-const titles={"game-rules":"범용 게임 마스터 규칙서","npc-interaction":"NPC 대사·보고 세부 규칙","record-system":"기록장·세계 상태 규칙"};
+const titles={"complete-rulebook":"완전 통합 규칙서","game-rules":"범용 게임 마스터 규칙서","npc-interaction":"NPC 대사·보고 세부 규칙","record-system":"기록장·세계 상태 규칙"};
 const requested=new URLSearchParams(location.search).get("doc")||"game-rules";
 const doc=Object.prototype.hasOwnProperty.call(titles,requested)?requested:"game-rules";
 const article=document.getElementById("reader-content"),toc=document.getElementById("reader-toc");
@@ -11,7 +11,7 @@ document.querySelectorAll("[data-doc]").forEach(a=>{if(a.dataset.doc===doc)a.cla
 const el=(name,value)=>{const n=document.createElement(name);if(value!==undefined)n.textContent=value;return n};
 function resolvedUrl(path){
   if(/^https?:\/\//i.test(path))return path;
-  const local=path.match(/^\.\/(game-rules|npc-interaction|record-system)\.md(?:#(.*))?$/);
+  const local=path.match(/^\.\/(complete-rulebook|game-rules|npc-interaction|record-system)\.md(?:#(.*))?$/);
   if(local)return "./reader.html?doc="+local[1]+(local[2]?"#"+local[2]:"");
   if(path.startsWith("../worlds/")&&path.endsWith(".md"))return "https://github.com/tutle0123/text-game-records/blob/main/"+path.slice(3);
   if(/^(\.\/|\.\.\/|#)[^\s]*$/.test(path))return path;
