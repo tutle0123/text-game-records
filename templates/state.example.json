@@ -1,30 +1,66 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "2.0",
   "game": {
     "id": "world-001",
+    "worldId": "example-world",
     "title": "새 게임",
-    "status": "진행 중"
+    "status": "설정 중",
+    "slug": "game-001-character-001",
+    "theme": "neutral"
   },
   "clock": {
     "dateLabel": "미정",
-    "time": "미정"
+    "time": "미정",
+    "isoLocal": null
   },
   "scene": {
     "title": "시작 전",
     "place": "미정",
-    "summary": "설정 모드"
+    "summary": "설정 모드. 진행 장면은 아직 시작하지 않았습니다."
   },
   "player": {
     "fullName": "미정",
     "age": null,
-    "rank": "",
-    "position": "",
-    "appearance": "",
-    "personality": "",
-    "background": "",
-    "playRule": ""
+    "rank": "미정",
+    "position": "미정",
+    "appearance": "미정",
+    "personality": "미정",
+    "background": "미정",
+    "playRule": "주인공의 대사와 행동은 사용자가 결정합니다."
   },
-  "people": [],
+  "people": [
+    {
+      "id": "npc-001",
+      "name": "미정",
+      "age": null,
+      "role": "미정",
+      "affiliation": "미정",
+      "occupation": "미정",
+      "description": "미정",
+      "note": "",
+      "appearance": "미정",
+      "personality": "미정",
+      "background": "미정",
+      "lastSeenAt": "확인되지 않음",
+      "currentActivity": {
+        "description": "현재 활동은 확인되지 않음",
+        "place": "확인되지 않음",
+        "confirmedAt": "확인되지 않음",
+        "certainty": "미확정"
+      },
+      "taskIds": [],
+      "goals": [],
+      "knowledge": [],
+      "secrets": []
+    }
+  ],
   "tasks": [],
-  "offstage": []
+  "relationships": [],
+  "worldState": {
+    "processes": [],
+    "notes": []
+  },
+  "places": [],
+  "organizations": [],
+  "secrets": []
 }
