@@ -35,9 +35,74 @@ function inline(parent,input){
   }
   if(at<input.length)parent.append(document.createTextNode(input.slice(at)));
 }
+// 장·편으로 묶인 접이식 목차: 통합본에서는 "제N편/부록"만 대분류로 사용
+let currentGroup=null;
+const headingLinks=[];
+function group(label){
+  const details=el("details");
+  details.className="toc-chapter";
+  const summary=el("summary",label);
+  const items=el("div"); items.className="toc-chapter-items";
+  details.append(summary,items);
+  toc.append(details);
+  currentGroup={details,items};
+  if(toc.children.length===1)details.open=true;
+}
+function appendToc(label,id,level){
+  if(!currentGroup)group("시작 안내");
+  const a=el("a",label);
+  a.href="#"+id;
+  a.className="toc-item level-"+level;
+  currentGroup.items.append(a);
+  headingLinks.push({id,a,group:currentGroup.details});
+}
 function heading(level,label,index){
   const h=el("h"+level);inline(h,label);h.id="rule-"+index;article.append(h);
-  if(level<=3){const a=el("a",label.length>58?label.slice(0,58)+"…":label);a.href="#"+h.id;a.className="level-"+level;toc.append(a);}
+  const isFull=doc==="complete-rulebook";
+  if(level===1){
+    const isPart=/^(제[0-9]+편|부록)(?:\\s|\\b|$)/.test(label);
+    if(!isFull || isPart){group(label);appendToc("편 시작",h.id,1);}
+    else if(!currentGroup){group("시작 안내");appendToc("규칙서 첫머리",h.id,1);}
+  }else if(level===2){
+    appendToc(label,h.id,2);
+  }
+}
+function setupToc(){
+  const count=document.getElementById("toc-count");
+  if(count)count.textContent=toc.querySelectorAll(".toc-chapter").length+"개 묶음";
+  const target=decodeURIComponent(location.hash.slice(1));
+  const match=headingLinks.find(x=>x.id===target);
+  if(match){
+    toc.querySelectorAll(".toc-chapter").forEach(x=>x.open=false);
+    match.group.open=true;
+    requestAnimationFrame(()=>document.getElementById(match.id)?.scrollIntoView({block:"start"}));
+  }
+  let scheduled=false;
+  const highlight=()=>{
+    scheduled=false;
+    let chosen=headingLinks[0];
+    for(const item of headingLinks){
+      const node=document.getElementById(item.id);
+      if(node && node.getBoundingClientRect().top<180)chosen=item;
+    }
+    for(const item of headingLinks){
+      item.a.classList.toggle("is-current",item===chosen);
+      if(item===chosen)item.a.setAttribute("aria-current","location");
+      else item.a.removeAttribute("aria-current");
+    }
+    if(chosen && window.innerWidth>850 && !chosen.group.open){
+      toc.querySelectorAll(".toc-chapter").forEach(g=>g.open=g===chosen.group);
+    }
+  };
+  window.addEventListener("scroll",()=>{
+    if(!scheduled){scheduled=true;requestAnimationFrame(highlight);}
+  },{passive:true});
+  window.addEventListener("hashchange",()=>{
+    const id=decodeURIComponent(location.hash.slice(1));
+    const item=headingLinks.find(x=>x.id===id);
+    if(item){item.group.open=true;document.getElementById(id)?.scrollIntoView({block:"start"});}
+  });
+  highlight();
 }
 function table(lines){
   const t=el("table");
@@ -100,6 +165,7 @@ function render(content){
     }
     const p=el("p");inline(p,para.join(" "));article.append(p);
   }
+  setupToc();
 }
 fetch("./"+doc+".md",{cache:"no-store"})
   .then(res=>{if(!res.ok)throw Error("HTTP "+res.status);return res.text()})
