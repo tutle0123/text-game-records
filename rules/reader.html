@@ -31,11 +31,56 @@
 .reader-toc a.level-3{padding-left:17px}
 .reader-error{padding:20px;background:#fff5f0;color:#92523b;border:1px solid #eed8cc;border-radius:8px}
 @media(max-width:850px){.reader-layout{grid-template-columns:1fr}.reader-side{position:static;order:-1}.reader-toc{display:flex;flex-wrap:wrap;max-height:none}.reader-toc a{font-size:10px;padding:5px 7px}.reader-toc a.level-3{padding-left:7px}}
+
+/* v2.2: 읽기 쉬운 편별 접이식 목차. 휴대전화에서는 본문 위에 간결하게 표시 */
+html{scroll-padding-top:22px}
+.reader-main{max-width:1380px}
+.reader-layout{grid-template-columns:minmax(0,1fr) 285px;gap:21px}
+.reader-content h1,.reader-content h2,.reader-content h3{scroll-margin-top:32px}
+.reader-content h1:not(:first-child){margin-top:35px;padding-top:22px;border-top:2px solid #dde8e5}
+.reader-side{max-height:calc(100vh - 34px);overflow-y:auto;overscroll-behavior:contain;padding:16px;scrollbar-width:thin}
+.toc-panel-head{display:flex;align-items:center;justify-content:space-between;gap:7px}
+.reader-side .toc-panel-head strong{font-size:14px;margin:0}
+.toc-panel-head span{color:#8795a2;font-size:10px;white-space:nowrap}
+.toc-help{font-size:11px;color:#8996a2;line-height:1.5;margin:7px 0 13px}
+.reader-toc{display:grid;gap:7px;max-height:none;overflow:visible}
+.toc-chapter{border:1px solid #e2e9ed;border-radius:9px;background:#fff;overflow:hidden}
+.toc-chapter summary{display:flex;align-items:center;gap:8px;cursor:pointer;padding:12px 11px;font-size:12px;font-weight:800;line-height:1.55;color:#33495a;list-style:none}
+.toc-chapter summary::-webkit-details-marker{display:none}
+.toc-chapter summary:before{content:"▸";color:#608c80;font-size:15px;transition:transform .15s}
+.toc-chapter[open] summary{background:#eef4f3;color:#234f4b;border-bottom:1px solid #d6e4df}
+.toc-chapter[open] summary:before{transform:rotate(90deg)}
+.toc-chapter-items{display:grid;gap:1px;padding:8px}
+.reader-toc .toc-chapter-items a{font-size:11px;line-height:1.55;padding:7px 9px;white-space:normal;overflow-wrap:break-word;border-left:2px solid transparent;border-radius:4px;color:#657889}
+.reader-toc .toc-chapter-items a.level-1{font-size:10px;color:#8795a0}
+.reader-toc .toc-chapter-items a:hover{color:#205d55;background:#edf4f2}
+.reader-toc .toc-chapter-items a.is-current{color:#195d53;background:#e9f4f0;border-left-color:#468a77;font-weight:800}
+.toc-back{display:block;margin-top:14px;color:#42756f!important;text-align:right;font-size:11px;font-weight:700}
+@media(max-width:850px){
+  .reader-layout{display:flex;flex-direction:column;gap:13px}
+  .reader-side{position:static;order:-1;width:100%;max-height:none;overflow:visible;padding:15px}
+  .toc-help{margin:6px 0 12px}
+  .reader-toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:none}
+  .toc-chapter summary{font-size:12px;min-height:43px}
+  .toc-chapter[open]{grid-column:1/-1}
+  .toc-chapter-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+  .reader-toc .toc-chapter-items a{font-size:11px;padding:8px}
+}
+@media(max-width:520px){
+  .reader-main{padding:23px 13px 65px}
+  .reader-links{gap:6px}.reader-links a{font-size:11px;padding:8px 10px}
+  .reader-content{padding:21px 16px;font-size:13px;line-height:1.8}
+  .reader-content h1{font-size:21px}.reader-content h2{font-size:18px}.reader-content h3{font-size:15px}
+  .reader-toc{grid-template-columns:1fr}
+  .toc-chapter[open]{grid-column:auto}
+  .toc-chapter-items{grid-template-columns:1fr}
+  .toc-chapter summary{min-height:0}
+}
 </style></head>
 <body data-page="rules"><div class="site-shell">
 <header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">A</span><span><b>ARCHIVE</b><small>TEXT GAME RECORDS</small></span></a><nav class="top-nav" aria-label="주 메뉴"><a href="../index.html">게임 기록</a><a class="active" href="./index.html">운영 규칙</a><a href="https://github.com/tutle0123/text-game-records" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></header>
 <main class="reader-main"><div class="reader-top"><span class="section-overline">REFERENCE LIBRARY</span><h1 id="reader-title">규칙서 읽기</h1><p>범용 기준은 세계관과 관계없이 적용하며, 세계관마다 고유한 확정 설정은 따로 유지합니다.</p>
 <div class="reader-links"><a href="./reader.html?doc=complete-rulebook" data-doc="complete-rulebook">완전 통합본</a><a href="./reader.html?doc=game-rules" data-doc="game-rules">범용 게임 마스터 규칙</a><a href="./reader.html?doc=npc-interaction" data-doc="npc-interaction">NPC 대사·보고 규칙</a><a href="./reader.html?doc=record-system" data-doc="record-system">기록장 운영 규칙</a></div></div>
-<div class="reader-layout"><article id="reader-content" class="reader-content" aria-live="polite">규칙을 불러오는 중입니다.</article><aside class="reader-side"><strong>이 문서의 목차</strong><nav id="reader-toc" class="reader-toc" aria-label="문서 목차"></nav></aside></div></main>
+<div class="reader-layout"><article id="reader-content" class="reader-content" aria-live="polite">규칙을 불러오는 중입니다.</article><aside class="reader-side"><div class="toc-panel-head"><strong>문서 목차</strong><span id="toc-count"></span></div><p class="toc-help">편 제목을 누르면 세부 항목이 펼쳐집니다.</p><nav id="reader-toc" class="reader-toc" aria-label="문서 목차"></nav><a class="toc-back" href="#reader-title">↑ 문서 맨 위로</a></aside></div></main>
 <footer class="site-footer"><span>TEXT GAME RECORDS / RULEBOOK</span><a href="../index.html">게임 목록으로 돌아가기</a></footer></div>
 <script src="./reader.js" defer></script></body></html>
