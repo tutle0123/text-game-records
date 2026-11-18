@@ -56,3 +56,13 @@
 - 수정 전에 GitHub의 **최신 상태**를 읽고 내용 충돌을 확인합니다. 변경 후 파일 읽기와 배포 성공 여부는 별도로 확인합니다.
 - **미공개 정보**는 사용자에게는 열람 가능하지만, GitHub Pages 공개 사이트 방문자에게도 접근 가능합니다. 접기 기능은 접근 제한이 아닙니다.
 - 게임을 하지 않는 동안 모델이 스스로 세계를 굴리거나 GitHub를 수정하지 않습니다. 재개 시 경과한 게임 시간을 기준으로 필요한 처리를 합니다.
+
+## 6. 세계관 선택과 고정 설정집 출처
+
+- 새 게임을 만들 때에는 **사용자가 선택한 세계관 및 제목이 정확한 세계관 설명서**를 한 차례 확인합니다. 이미 지정했다면 다시 묻지 않습니다.
+- 범용 게임 규칙이나 NPC 규칙은 세계관 설명서의 대체물이 아닙니다. 해당 세계관의 정치·역사·문화·조직·호칭·지명은 **지정된 세계관 설정집 원문**을 기준으로 합니다.
+- 기준 설정집의 제목 및 원문 출처를 `game.worldbookTitle`, `game.worldbookSource`에 기록합니다. GitHub에 올라간 요약본 경로는 `game.worldbookSummaryPath`로 따로 관리하며 원문과 혼동하지 않습니다.
+- 게임 시작·재개 시 프로젝트에 있는 세계관 원문 및 저장소에 있는 게임별 기록을 참조합니다.
+- **GitHub 저장소:** https://github.com/tutle0123/text-game-records
+- **게임 기록관 사이트:** https://tutle0123.github.io/text-game-records/
+- **완전 통합 규칙서:** https://tutle0123.github.io/text-game-records/rules/reader.html?doc=complete-rulebook
