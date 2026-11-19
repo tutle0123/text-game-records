@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "text-game-ai-rules-manifest",
+  "updated": "2026-11-20",
+  "advisory": "웹 문서만으로 모든 AI 새 채팅의 자동 읽기를 강제하지 못합니다. 접근 가능한 AI는 시작 시 여기에 명시된 파일을 직접 읽어야 합니다.",
+  "entrypoint": "AGENTS.md",
+  "files": {
+    "aiStart": {
+      "path": "rules/AI-START-HERE.md",
+      "scope": "all_games",
+      "required": true
+    },
+    "complete": {
+      "path": "rules/complete-rulebook.txt",
+      "scope": "all_games",
+      "required": true
+    },
+    "npcCausality": {
+      "path": "rules/npc-causality-v1.0.txt",
+      "scope": "all_games",
+      "required": true,
+      "notes": "하단 #001 사례는 #001에만 적용"
+    },
+    "gameRules": {
+      "path": "rules/game-rules.md",
+      "scope": "all_games",
+      "required": true
+    },
+    "npcInteraction": {
+      "path": "rules/npc-interaction.md",
+      "scope": "all_games",
+      "required": true
+    },
+    "records": {
+      "path": "rules/record-system.md",
+      "scope": "all_games",
+      "required": true
+    }
+  },
+  "indices": {
+    "games": "catalog.json",
+    "worldbookSummary": "worlds/<world-id>/world.md"
+  },
+  "gameState": {
+    "state": "worlds/<world-id>/<game-folder>/state.json",
+    "history": "worlds/<world-id>/<game-folder>/history.json"
+  },
+  "priority": [
+    "latest_user_directive",
+    "confirmed_individual_game_state",
+    "original_selected_worldbook",
+    "general_and_npc_rulebooks",
+    "careful_inference"
+  ],
+  "beforeEveryTurn": [
+    "read_latest_game_state",
+    "enforce_player_autonomy",
+    "check_npc_knowledge_sources",
+    "check_npc_roles_and_locations",
+    "check_dialogue_causality_and_necessity",
+    "check_time_and_information_transfer",
+    "avoid_filler_plot_hooks",
+    "write_only_selected_game_when_authorized"
+  ],
+  "scopeGuard": "Do not copy or write between game #001 and game #002; game IDs are independent.",
+  "publicSite": "https://tutle0123.github.io/text-game-records/rules/"
+}
