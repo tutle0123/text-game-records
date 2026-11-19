@@ -1,7 +1,7 @@
 /* 규칙서 원문 Markdown을 외부 라이브러리 없이 안전한 DOM으로 표시 */
 (() => {
 "use strict";
-const titles={"complete-rulebook":"완전 통합 규칙서","game-rules":"범용 게임 마스터 규칙서","npc-interaction":"NPC 대사·행동 세부 규칙","record-system":"기록장·세계 상태 규칙"};
+const titles={"ai-start":"AI 필독 시작 규칙","npc-causality":"NPC 인지·역할·인과관계 강화 규칙서","complete-rulebook":"완전 통합 규칙서","game-rules":"범용 게임 마스터 규칙서","npc-interaction":"NPC 대사·행동 세부 규칙","record-system":"기록장·세계 상태 규칙"};
 const requested=new URLSearchParams(location.search).get("doc")||"game-rules";
 const doc=Object.prototype.hasOwnProperty.call(titles,requested)?requested:"game-rules";
 const article=document.getElementById("reader-content"),toc=document.getElementById("reader-toc");
@@ -11,8 +11,8 @@ document.querySelectorAll("[data-doc]").forEach(a=>{if(a.dataset.doc===doc)a.cla
 const el=(name,value)=>{const n=document.createElement(name);if(value!==undefined)n.textContent=value;return n};
 function resolvedUrl(path){
   if(/^https?:\/\//i.test(path))return path;
-  const local=path.match(/^\.\/(complete-rulebook|game-rules|npc-interaction|record-system)\.md(?:#(.*))?$/);
-  if(local)return "./reader.html?doc="+local[1]+(local[2]?"#"+local[2]:"");
+  const local=path.match(/^\.\/(complete-rulebook|game-rules|npc-interaction|record-system|npc-causality-v1\.0|AI-START-HERE)\.(md|txt)(?:#(.*))?$/);
+  if(local){const key={"npc-causality-v1.0":"npc-causality","AI-START-HERE":"ai-start"}[local[1]]||local[1];return "./reader.html?doc="+key+(local[3]?"#"+local[3]:"");}
   if(path.startsWith("../worlds/")&&path.endsWith(".md"))return "https://github.com/tutle0123/text-game-records/blob/main/"+path.slice(3);
   if(/^(\.\/|\.\.\/|#)[^\s]*$/.test(path))return path;
   return "#";
@@ -167,7 +167,7 @@ function render(content){
   }
   setupToc();
 }
-fetch("./"+doc+".md",{cache:"no-store"})
+fetch(({"ai-start":"./AI-START-HERE.md","npc-causality":"./npc-causality-v1.0.txt","complete-rulebook":"./complete-rulebook.txt"}[doc]||"./"+doc+".md"),{cache:"no-store"})
   .then(res=>{if(!res.ok)throw Error("HTTP "+res.status);return res.text()})
   .then(render)
   .catch(error=>{
@@ -175,7 +175,7 @@ fetch("./"+doc+".md",{cache:"no-store"})
     const box=el("div","문서를 불러올 수 없습니다 ("+error.message+"). ");
     box.className="reader-error";
     const a=el("a","GitHub에서 원문 열기");
-    a.href="https://github.com/tutle0123/text-game-records/blob/main/rules/"+doc+".md";
+    a.href="https://github.com/tutle0123/text-game-records/blob/main/rules/"+({"ai-start":"AI-START-HERE.md","npc-causality":"npc-causality-v1.0.txt","complete-rulebook":"complete-rulebook.txt"}[doc]||doc+".md");
     a.target="_blank";a.rel="noopener noreferrer";box.append(a);article.append(box);
   });
 })();
