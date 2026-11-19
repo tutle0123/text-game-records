@@ -1,0 +1,13 @@
+# Text Game Records — AI/LLM entrypoints
+
+> This document is an optional discovery hint for tools that use llms.txt; it cannot force all AI chats to read these files.
+
+- [AI must-read startup and validation protocol](https://tutle0123.github.io/text-game-records/rules/AI-START-HERE.md)
+- [Machine-readable official manifest](https://tutle0123.github.io/text-game-records/rules/manifest.json)
+- [Complete general game rulebook](https://tutle0123.github.io/text-game-records/rules/complete-rulebook.txt)
+- [NPC cognition, roles and causality supplement v1.0](https://tutle0123.github.io/text-game-records/rules/npc-causality-v1.0.txt)
+- [NPC interaction rules](https://tutle0123.github.io/text-game-records/rules/npc-interaction.md)
+- [Record and game-state rules](https://tutle0123.github.io/text-game-records/rules/record-system.md)
+- [Games index](https://tutle0123.github.io/text-game-records/catalog.json)
+
+Before narrating, follow the AI startup protocol and load the correct game's latest state/history and the user-specified original worldbook. Do not read another game's facts as the current game's facts.
