@@ -301,6 +301,9 @@
     const worldId=state.game.worldId;
     [
       ["세계관 설정",root+"worlds/"+encodeURIComponent(worldId)+"/world.md"],
+      ["AI 필독 시작 규칙",root+"rules/reader.html?doc=ai-start"],
+      ["NPC 인지·인과관계 강화 규칙",root+"rules/reader.html?doc=npc-causality"],
+      ["완전 통합 규칙서",root+"rules/reader.html?doc=complete-rulebook"],
       ["범용 게임 규칙",root+"rules/game-rules.md"],
       ["기록장 운영 규칙",root+"rules/record-system.md"],
       ["전체 기록관",root+"index.html"]
