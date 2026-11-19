@@ -8,7 +8,21 @@
       "symbol": "▣",
       "theme": "classified",
       "worldFile": "worlds/bardonia/world.md",
-      "games": []
+      "games": [
+        {
+          "id": "bardonia-belov-001",
+          "slug": "game-001-leon-belov-001",
+          "gameNumber": 1,
+          "nameNumber": 1,
+          "title": "정치수사과장의 일상 — 레온 벨로프 #001",
+          "character": "레온 벨로프",
+          "characterLabel": "레온 벨로프 #001",
+          "status": "진행 중",
+          "gameDate": "연방력 38년 10월 24일 · 15:40",
+          "summary": "간부주택단지 공직자 검속 현장",
+          "url": "worlds/bardonia/game-001-leon-belov-001/index.html"
+        }
+      ]
     }
   ]
 }
