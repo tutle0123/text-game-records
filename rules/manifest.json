@@ -18,8 +18,7 @@
     "npcCausality": {
       "path": "rules/npc-causality-v1.0.txt",
       "scope": "all_games",
-      "required": true,
-      "notes": "하단 #001 사례는 #001에만 적용"
+      "required": true
     },
     "gameRules": {
       "path": "rules/game-rules.md",
