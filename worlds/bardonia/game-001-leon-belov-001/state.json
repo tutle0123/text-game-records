@@ -13,13 +13,13 @@
   },
   "clock": {
     "dateLabel": "연방력 38년 12월 31일",
-    "time": "16:41",
+    "time": "17:22",
     "isoLocal": null
   },
   "scene": {
-    "title": "동부 큰길 · 퇴근 산책",
-    "place": "그레이트베일 동부 제9노동자 공동주택 인근 큰길",
-    "summary": "레온은 마당의 노인에게 웃으며 손을 내리라고 공손히 손짓한 뒤 느긋하게 걸어 큰길로 나섰습니다. 호송차는 검속자를 싣고 청사로 출발했습니다. 큰길에는 새해 전날 저녁 국영 상점 앞의 긴 줄과 귀가하는 사람들이 있고, 제복을 본 시민들이 경례하거나 길을 비껴갑니다. 한 블록 앞에 전차 정류장이, 그 맞은편 골목에 술집 간판이 있습니다. 3층 현장은 보리스가 지휘 중입니다. 레온의 퇴근길 행선지는 미정."
+    "title": "제2동 3층 복도 · 이웃집 문",
+    "place": "그레이트베일 동부 제9노동자 공동주택 제2동 3층 복도",
+    "summary": "레온은 큰길에서 공동주택으로 돌아와 3층에 올라, 페도토프의 집 맞은편 집 문을 두드렸습니다. 페도토프의 집 문에는 보안부 봉인지가 붙어 있고, 보리스·안나·오를로프 등 제4과 수사관들은 현장 정리를 마치고 철수한 상태입니다. 마리야와 미샤는 17시 5분쯤 경찰서 차량으로 보호소에 이송되었습니다. 맞은편 집 문이 막 열리려는 참이며, 레온의 용건은 미정입니다."
   },
   "player": {
     "fullName": "레온 벨로프",
@@ -44,12 +44,12 @@
       "appearance": "미정",
       "personality": "과묵하고 침착하며 아첨하지 않고 과장의 지휘권을 존중합니다.",
       "background": "오랜 수사 경력. 세부 경력 미정.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:31",
+      "lastSeenAt": "연방력 38년 12월 31일 17:10",
       "currentActivity": {
-        "description": "레온을 배웅한 뒤 3층에서 현장 마무리를 지휘하며 경찰서 이송 차량을 기다림",
-        "place": "제2동 3층",
-        "confirmedAt": "연방력 38년 12월 31일 16:31",
-        "certainty": "현장 확인"
+        "description": "현장 정리와 압수물 반출을 마치고 철수",
+        "place": "제2동에서 청사 방향",
+        "confirmedAt": "연방력 38년 12월 31일 17:10",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
@@ -70,12 +70,12 @@
       "appearance": "미정",
       "personality": "붙임성이 좋고 행동이 빠르며 대담하고 적극적입니다. 때때로 성급하고 농담을 즐깁니다.",
       "background": "구체적인 경력 미정.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:41",
+      "lastSeenAt": "연방력 38년 12월 31일 16:50",
       "currentActivity": {
-        "description": "검속자를 태운 호송차로 청사를 향해 출발함",
-        "place": "호송차 이동 중",
-        "confirmedAt": "연방력 38년 12월 31일 16:36",
-        "certainty": "현장 확인"
+        "description": "호송차로 청사에 도착한 뒤의 활동은 확인되지 않음",
+        "place": "국가보안부 중앙청사",
+        "confirmedAt": "연방력 38년 12월 31일 16:50",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
@@ -96,12 +96,12 @@
       "appearance": "미정",
       "personality": "꼼꼼하고 현실적이며 침착하고 정확히 보고합니다.",
       "background": "구체적인 경력 미정.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:31",
+      "lastSeenAt": "연방력 38년 12월 31일 17:10",
       "currentActivity": {
-        "description": "집 안에서 압수물 확인·정리를 계속함",
-        "place": "제2동 3층 페도토프의 집",
-        "confirmedAt": "연방력 38년 12월 31일 16:31",
-        "certainty": "현장 확인"
+        "description": "현장 정리와 압수물 반출을 마치고 철수",
+        "place": "제2동에서 청사 방향",
+        "confirmedAt": "연방력 38년 12월 31일 17:10",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
@@ -194,12 +194,12 @@
       "appearance": "미정",
       "personality": "미정",
       "background": "아내 마리야, 아들 미샤와 거주. 혐의 진위 미확인.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:41",
+      "lastSeenAt": "연방력 38년 12월 31일 16:50",
       "currentActivity": {
-        "description": "호송차에 실려 청사로 이송 중. 의식이 흐릿함",
-        "place": "호송차 이동 중",
-        "confirmedAt": "연방력 38년 12월 31일 16:36",
-        "certainty": "현장 확인"
+        "description": "호송차로 청사에 도착한 뒤의 활동은 확인되지 않음",
+        "place": "국가보안부 중앙청사",
+        "confirmedAt": "연방력 38년 12월 31일 16:50",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
@@ -220,12 +220,12 @@
       "appearance": "미정",
       "personality": "미정",
       "background": "상세 신원 미정.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:31",
+      "lastSeenAt": "연방력 38년 12월 31일 17:05",
       "currentActivity": {
-        "description": "짐을 꾸리며 경찰서 이송 차량을 기다림",
-        "place": "제2동 3층 페도토프의 집 현관",
-        "confirmedAt": "연방력 38년 12월 31일 16:31",
-        "certainty": "현장 확인"
+        "description": "경찰서 차량으로 보호소에 이송됨",
+        "place": "보호소(위치 미정)",
+        "confirmedAt": "연방력 38년 12월 31일 17:05",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [],
       "goals": [],
@@ -259,12 +259,12 @@
       "appearance": "미정",
       "personality": "미정",
       "background": "상세 신원 미정.",
-      "lastSeenAt": "연방력 38년 12월 31일 16:31",
+      "lastSeenAt": "연방력 38년 12월 31일 17:05",
       "currentActivity": {
-        "description": "짐을 꾸리며 경찰서 이송 차량을 기다림",
-        "place": "제2동 3층 페도토프의 집 현관",
-        "confirmedAt": "연방력 38년 12월 31일 16:31",
-        "certainty": "현장 확인"
+        "description": "경찰서 차량으로 보호소에 이송됨",
+        "place": "보호소(위치 미정)",
+        "confirmedAt": "연방력 38년 12월 31일 17:05",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [],
       "goals": [],
@@ -283,12 +283,12 @@
       "appearance": "미정",
       "personality": "미정",
       "background": "미정",
-      "lastSeenAt": "연방력 38년 12월 31일 16:41",
+      "lastSeenAt": "연방력 38년 12월 31일 16:50",
       "currentActivity": {
-        "description": "검속자를 태운 호송차로 청사를 향해 출발함",
-        "place": "호송차 이동 중",
-        "confirmedAt": "연방력 38년 12월 31일 16:36",
-        "certainty": "현장 확인"
+        "description": "호송차로 청사에 도착한 뒤의 활동은 확인되지 않음",
+        "place": "국가보안부 중앙청사",
+        "confirmedAt": "연방력 38년 12월 31일 16:50",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
@@ -309,16 +309,40 @@
       "appearance": "미정",
       "personality": "미정",
       "background": "미정",
-      "lastSeenAt": "연방력 38년 12월 31일 16:31",
+      "lastSeenAt": "연방력 38년 12월 31일 17:10",
       "currentActivity": {
-        "description": "마리야·미샤가 짐을 꾸리는 동안 현관에서 감독하며 이송 차량 대기",
-        "place": "제2동 3층 페도토프의 집 현관",
-        "confirmedAt": "연방력 38년 12월 31일 16:31",
-        "certainty": "현장 확인"
+        "description": "현장 정리와 압수물 반출을 마치고 철수",
+        "place": "제2동에서 청사 방향",
+        "confirmedAt": "연방력 38년 12월 31일 17:10",
+        "certainty": "추정(현장 정리 후 철수)"
       },
       "taskIds": [
         "arrest-002"
       ],
+      "goals": [],
+      "knowledge": [],
+      "secrets": []
+    },
+    {
+      "id": "npc-016",
+      "name": "맞은편 집 주민(이름 미상)",
+      "age": null,
+      "role": "제2동 3층 거주민",
+      "affiliation": "민간인",
+      "occupation": "미정",
+      "description": "페도토프의 집 맞은편 집에 거주. 레온이 노크한 문을 여는 인물. 성별·나이·직업 미정.",
+      "note": "",
+      "appearance": "미정",
+      "personality": "미정",
+      "background": "미정",
+      "lastSeenAt": "연방력 38년 12월 31일 17:22",
+      "currentActivity": {
+        "description": "레온의 노크를 듣고 문을 열려는 중",
+        "place": "제2동 3층 맞은편 집 현관",
+        "confirmedAt": "연방력 38년 12월 31일 17:22",
+        "certainty": "현장 확인"
+      },
+      "taskIds": [],
       "goals": [],
       "knowledge": [],
       "secrets": []
@@ -330,8 +354,8 @@
       "title": "제9노동자 공동주택 각하 비방 고발 사건 검속·압수",
       "status": "신병 호송 중 · 가택 수색 및 압수물 확인 중",
       "summary": "직장 동료의 각하 비방 발언 고발이 제3과를 거쳐 제4과로 배당된 사건. 3층 주민 니콜라이 페도토프를 검속. 수색 중 아내를 밀쳐낸 데 반발해 저항했고 구타당함.",
-      "lastKnown": "연방력 38년 12월 31일 16:41, 호송차가 검속자를 싣고 청사로 출발. 3층 현장은 보리스가 지휘 중이며 안나가 압수물 정리, 오를로프가 가족과 함께 경찰서 이송 차량 대기.",
-      "nextStep": "검속자 청사 도착 후 의무 확인·진술조서, 압수물 정리, 경찰서 차량으로 가족 보호소 이송",
+      "lastKnown": "연방력 38년 12월 31일 17:22, 검속자는 청사로 이송됨. 가족은 17:05쯤 보호소로 이송됨. 제4과 수사관들은 현장 정리를 마치고 철수. 3층 집은 봉인됨.",
+      "nextStep": "청사에서 검속자 의무 확인·진술조서, 압수물 정리",
       "owner": "제1국 제4과",
       "ownerIds": [
         "npc-001",
@@ -446,8 +470,8 @@
     {
       "id": "place-003",
       "name": "그레이트베일 동부 제9노동자 공동주택 제2동",
-      "description": "4층 석조 노동자 공동주택. 검속자의 집은 3층. 좁은 계단통, 2~3층 사이 천장 전구 하나. 건물 밖 마당에 보안부 호송차와 운전원 대기.",
-      "lastKnown": "연방력 38년 12월 31일 16:20"
+      "description": "4층 석조 노동자 공동주택. 검속자의 집은 3층. 좁은 계단통, 2~3층 사이 천장 전구 하나. 건물 밖 마당에 보안부 호송차와 운전원 대기. 17시 20분 무렵 기준 3층 페도토프의 집 문에는 보안부 봉인지가 붙어 있음.",
+      "lastKnown": "연방력 38년 12월 31일 17:22"
     }
   ],
   "organizations": [
